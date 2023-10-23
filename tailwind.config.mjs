@@ -28,8 +28,8 @@ export default {
 				primary : 'Poppins'
 			},
 			boxShadow: {
-				custom1 : '0px 2px 40px 0px rgba(8, 70, 78, 0,08)',
-				custom1 : '0px 0px 30px 0px rgba(8, 73, 81, 0,06)',
+				custom1 : '0px 2px 40px 0px rgba(8, 70, 78, 0.08)',
+				custom2 : '0px 0px 30px 0px rgba(8, 73, 81, 0.06)',
 			},
 			backgroundImage : {
 				service : 'url(../assets/img/services/bg.svg)',

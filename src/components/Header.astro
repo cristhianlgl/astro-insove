@@ -1,8 +1,10 @@
 ---
 import logo from "../assets/img/header/logo.svg";
+import FormSearch from "./FormSearch.astro";
+import Nav from "./Nav.astro";
 
 ---
-<header class="bg-pink-200 py-8 lg:pt-6 lg:pb-14">
+<header class="py-8 lg:pt-6 lg:pb-14">
     <div class="container mx-auto flex flex-col gap-y-4 lg:relative lg:flex-row lg:justify-between lg:gap-y-0">
         <div class="flex justify-center lg:justify-normal">
             <a href="#">
@@ -12,13 +14,48 @@ import logo from "../assets/img/header/logo.svg";
         <div class="flex flex-col gap-y-4 lg:flex-row lg:gap-x-10 lg:gap-y-10">
             <div class="flex justify-center items-center gap-x-2 lg:justify-normal">
                 <i class="text-2xl text-accent ri-map-pin-2-fill"></i>
-                <span>Cl 92 923 cs 3 </span>
+                <span class="text-secondary">Cl 92 923 cs 3 </span>
             </div>
             <div class="flex justify-center items-center gap-x-2 lg:justify-normal">
                 <i class="text-2xl text-accent ri-map-pin-2-fill"></i>
-                <span>+(882) 8882 882</span>
+                <span class="text-secondary">+(882) 8882 882</span>
             </div>
+            <button class="btn btn-sm btn-outline w-[240px] mx-auto lg:w-auto lg:mx-0">Book Now</button>
         </div>
-        <div></div>
+        <!-- mobile nav -->
+        <nav class="mnav bg-white fixed w-[300px] top-0 -left-[300px] h-screen shadow-2xl transition-all duration-300 z-20 lg:hidden">
+            
+            <div class="mnav__closed-btn h-8 w-8 bg-primary relative -right-full top-4 flex justify-center items-center rounded-tr-lg rounded-br-lg cursor-pointer transition-all">
+                <i class="mnav__closed-btn-icon ri-arrow-right-s-fill text-white text-2xl"></i>
+            </div>
+            <div class="px-12 flex flex-col gap-y-12 h-screen">
+                <a href="#">
+                    <img src={logo.src} alt="">
+                </a> 
+                <Nav></Nav>         
+                <FormSearch></FormSearch>
+            </div>
+        </nav>
+
+        <!-- desktop nav -->
+        <nav class="bg-white absolute w-full left-0  -bottom-[86px] shadow-custom1 h-16 hidden lg:flex lg:justify-between px-[50px] rounded-[10px] lg:items-center">
+            <Nav></Nav>  
+            <FormSearch></FormSearch>
+        </nav>
     </div>
 </header>
+<script>
+    const mobileNav = document.querySelector('.mnav');
+    const navButton = document.querySelector('.mnav__closed-btn');
+    const navIcon = document.querySelector('.mnav__closed-btn-icon');
+
+    const classOpen = 'left-0';
+    const classClose = '-left-[300px]';
+
+    navButton?.addEventListener('click', () => {
+        mobileNav?.classList.toggle(classOpen);
+        mobileNav?.classList.toggle(classClose);
+        navIcon?.classList.toggle('rotate-180');
+    });
+    
+</script>

@@ -1,0 +1,17 @@
+---
+import imgHero  from "../assets/img/hero/img.png";
+---
+<section class="hero bg-grey py-12 overflow-hidden xl:pb-0">
+    <article class="container mx-auto h-full flex  flex-col items-center justify-between xl:flex-row">
+        <header class="hero__text text-center xl:w-[48%] xl:text-left">
+            <div class="bg-white rounded-full flex items-center w-max py-[10px] px-[20px] gap-x-2 mb-[26px] mx-auto xl:mx-0">
+                <i class="ri-heart-pulse-line text-2xl text-accent"></i>                
+                <span class="uppercase text-base font-medium text-[#9ab4b7] tracking-[2.24px]">live your life</span>
+            </div>
+            <h1 class="h1 mb-6">We care  about your health</h1>
+            <p class="mb-[42px] md:max-w-xl ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur ratione cum similique aperiam, soluta, vel et necessitatibus quae velit modi.</p>
+            <button class="btn btn-lg btn-accent mx-auto xl:mx-0">Contact Us</button>
+        </header>
+        <img class="hero__img hidden max-w-[814px] xl:flex self-end" src={imgHero.src} alt="Imagen Hero">
+    </article>
+</section>

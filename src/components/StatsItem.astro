@@ -1,0 +1,12 @@
+---
+interface Props {
+    numberStat : string,
+    nameStat :string
+}
+
+const { numberStat, nameStat }  = Astro.props;
+---
+<div class="stats__item flex flex-col items-center flex-1 xl:border-r-2 xl:last:border-none">
+    <span class="text-4xl font-semibold text-accent-tertiary xl:text-[64px] xl:mb-2">{numberStat}</span>
+    <h2>{nameStat}</h2>
+</div>

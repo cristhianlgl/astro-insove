@@ -55,7 +55,7 @@ h1,h2,h3,h4,h5,h6 {
     @apply px-4;
 }
 
-.select {
+.section {
     @apply py-12 xl:py-[150px];
 }
 

@@ -1,0 +1,32 @@
+---
+import ServicesItems from './ServicesItems.astro';
+import type {ServicesItem} from '../types/ServicesItem';
+
+import icon1 from '../assets/icons/services/icon-1.svg';
+import icon2 from '../assets/icons/services/icon-2.svg';
+import icon3 from '../assets/icons/services/icon-3.svg';
+import icon4 from '../assets/icons/services/icon-4.svg';
+
+let items: ServicesItem[] = [
+    {icon:icon1, title:'General Practitioners', description:'Lorem, ipsum dolor sit amet consectetur adipisicing elit.'},{icon:icon2, title:'Pregnancy Support', description:'Lorem, ipsum dolor sit amet consectetur adipisicing elit.'},
+    {icon:icon3, title:'Nutricional Support', description:'Lorem, ipsum dolor sit amet consectetur adipisicing elit.'},{icon:icon4, title:'Pharmaceutical Care', description:'Lorem, ipsum dolor sit amet consectetur adipisicing elit.'}]
+---
+<section class="services">
+    <div class="bg-service bg-cover bg-no-repeat max-w-[1466px] mx-4 rounded-[20px] px-6 relative flex items-center h-[368px] -z-10 xl:mx-auto xl:px-0 xl:pt-[70px] xl:items-start">    
+        <div class="container mx-auto ">
+            <article class="services__top flex flex-col items-center xl:flex-row xl:mb-[60px]">
+                <h2 class="h2 text-white text-center mb-4 flex-1 xl:text-left xl:mb-0">Our Services for your Solutions</h2>
+                <p class="text-white text-center flex-1 max-w-2xl xl:text-left xl:max-w-none">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe hic dolorem ea perferendis adipisci, eligendi fuga itaque modi delectus maiores neque.</p>
+            </article>
+        </div>   
+    </div>
+    <div class="container mx-auto mt-8 xl:-mt-[144px]">
+        <div class="grid xl:grid-cols-4 gap-5">
+            {items.map( item => (
+                <ServicesItems 
+                    item={item}>
+                </ServicesItems>
+            ))}
+        </div>
+    </div>
+</section>

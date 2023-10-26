@@ -1,0 +1,13 @@
+---
+import type {ServicesItem} from '../types/ServicesItem';
+interface Props {
+    item: ServicesItem
+}
+
+const {item} = Astro.props
+---
+<div class="services__item bg-white p-[30px] rounded-[10px] shadow-custom2 min-h-[288px] text-center flex flex-col items-center">
+    <img class="mb-3.5" src={item.icon.src} alt="">
+    <h3 class="h3 mb-2.5">{item.title}</h3>
+    <p class="font-light leading-normal max-w-[300px]">{item.description}</p>
+</div>

@@ -1,0 +1,19 @@
+---
+interface Props {
+    options : string[]
+}
+
+const { options } = Astro.props;
+---
+<div class="select relative flex items-center">
+    <div class="absolute right-4">
+        <i class="ri-arrow-down-s-line text-3xl text-primary"></i>
+    </div>
+    <select class="appearance-none outline-none h-full w-full bg-transparent px-4" name="" id="">
+        {
+            options.map( (option, index) =>(
+                <option value={index+1}>{ option }</option>                
+            ))
+        }
+    </select>
+</div>

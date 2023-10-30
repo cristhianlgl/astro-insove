@@ -4,6 +4,8 @@ import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
 import Services from '../components/Services.astro';
 import Stats from '../components/Stats.astro';
+import Swiper from '../components/Swiper.astro';
+import Testimonial from '../components/Testimonial.astro';
 ---
 <html lang="en">
 	<head>
@@ -24,9 +26,10 @@ import Stats from '../components/Stats.astro';
 		<Stats></Stats>
 		<Services></Services>
 		<Appointment></Appointment>
+		<Testimonial></Testimonial>
 	</body>
-	<script is:inline src="/js/swiper-bundle.min.js"></script>
 	<script is:inline src="/js/scrollreveal.min.js"></script>
+	<Swiper></Swiper>
 	</html>
 	
 	<style is:global>@import '../style/global.css';</style>

@@ -35,8 +35,8 @@ export default {
 				service : 'url(../assets/img/services/bg.svg)',
 				testimonials : 'url(../assets/img/testimonials/bg.svg)',
 				departments: 'url(../assets/img/departments/bg.svg)',
-				quoteLeft: 'url(../assets/img/testimonials/quote-left.svg)',
-				quoteRight: 'url(../assets/img/testimonials/quote-right.svg)',
+				quoteLeft: 'url(../assets/icons/testimonials/quote-left.svg)',
+				quoteRight: 'url(../assets/icons/testimonials/quote-right.svg)',
 			}
 		},
 	},

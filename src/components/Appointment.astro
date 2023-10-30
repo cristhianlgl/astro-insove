@@ -7,7 +7,7 @@ import AppointmentSelect from "./AppointmentSelect.astro";
             Book Appointment or Call 
             <span class="text-accent-tertiary">(+223) 646 774</span>
         </h2>
-        <form action="appointment__form flex flex-col gap-y-5">
+        <form class="appointment__form flex flex-col gap-y-5">
             <div class="flex flex-col items-center gap-5 xl:flex-row">
                 <AppointmentSelect 
                     options = {['Select Department','Department 1', 'Department 2', 'Department 3']}>
@@ -15,10 +15,18 @@ import AppointmentSelect from "./AppointmentSelect.astro";
                 <AppointmentSelect 
                     options = {['Select Doctor','Dr Jane Doe', 'Dr John Doe', 'Dr Bob Smith']}>
                 </AppointmentSelect>         
-                <div>
-                    
-                </div>
             </div>
+            <div class="flex flex-col gap-5 xl:flex-row">
+                <input type="text" class="input" placeholder="Full Name">
+                <input type="text" class="input" placeholder="Phone Number">
+            </div>
+            <div class="flex flex-col gap-5 xl:flex-row">
+                <input type="date" class="input" >
+                <input type="time" class="input" >
+            </div>
+            <button class="btn btn-lg btn-accent self-start" type="submit">
+                Book an Appointment
+            </button>
         </form>
     </div>
 </section>

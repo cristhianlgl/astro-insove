@@ -1,0 +1,29 @@
+---
+interface Props {
+    question:string,
+    answer:string
+}
+
+const {question, answer} = Astro.props;
+---
+<div class="faq__item px-[30px] pt-7 pb-4 border-b cursor-pointer select-none">
+    <div class="flex justify-between items-center mb-4">
+        <h4 class="h4">{question}</h4>
+        <i class="faq__btn ri-add-circle-fill text-2xl text-accent"></i>
+    </div>
+    <p class="faq__answer h-0 overflow-hidden font-light">{answer}</p>
+</div>
+
+<script>
+
+    const faqItem = document.querySelectorAll('.faq__item');
+    faqItem.forEach((item) => {
+        let faqBtn = item.querySelector('.faq__btn');
+        item.addEventListener('click', ()=>{
+            console.log('click')
+            item.classList.toggle('open');
+            faqBtn?.classList.toggle('ri-indeterminate-circle-fill');
+            faqBtn?.classList.toggle('ri-add-circle-fill');
+        })
+    }) 
+</script>

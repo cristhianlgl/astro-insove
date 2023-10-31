@@ -1,8 +1,13 @@
 ---
+interface Props {
+    link:string,
+    name: string
+}
 
+const {link, name} = Astro.props;
 ---
 <li>
-    <a href="#" class="text-secondary hover:text-accent transition-all duration-300 lg:border-r lg:pr-4">
-        <slot/>
+    <a href=`#${link}` class="text-secondary hover:text-accent transition-all duration-300 lg:border-r lg:pr-4">
+        {name}
     </a>
 </li>
